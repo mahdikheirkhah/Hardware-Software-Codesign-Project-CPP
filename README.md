@@ -15,4 +15,4 @@ fft8-inline: there is a class complex for complex numbers(https://github.com/mah
 
 fft8-dynamic: besides the complex class, this imposition uses class "fifo_t" to make a queue (first in, first out), And there is a structure that uses "actiro" which uses four in and out queues. Each of the four steps becomes an input and output and each step becomes a function.
 
-fft8-multithread: it is almost like fft8-dynamic, but instead of threads it will use four threads. And each function is using one thread and in all of these functions we should make sure that there are enough inputs from the output of the last function(4 steps). 
+fft8-multithread: it is almost like fft8-dynamic, but it will use four threads. This means, besides the main thread, there will be more threads. And each function is using one thread and in all of these functions we should make sure that there are enough inputs from the output of the last function(4 steps). 
