@@ -9,12 +9,10 @@ Step 3: calculate the fft between four of the outputs of fft2 (fft4)
 Step 4: calculate the fft between eight of the outputs of fft4 (fft8)
 ![Screenshot 2024-09-29 175644](https://github.com/user-attachments/assets/7573f972-85bc-4da9-a77a-a833a945980f)
 
-there are three implemnations and the goal is to find the execution time of each implemtion and compare them:
+There are three implementations and the goal is to find the execution time of each implication and compare them:
 
-fft8-inline: there is a class complex for complex numbers(https://github.com/mahdikheirkhah/advanced-programming-with-CPP). the w_cal method used for calculating the W which has been refered to in the bottom of picture above. then in the main func it will first cin the input from the user then do all the 4 steps.
+fft8-inline: there is a class complex for complex numbers(https://github.com/mahdikheirkhah/advanced-programming-with-CPP). The w_cal method used for calculating the W is referred to at the bottom of the picture above. Then, in the main function, it will first cin the input from the user then do all the 4 steps.
 
-fft8-dynamic: beside the complex class this implemtion use class "fifo_t" to make a queue (first in first out). and there is a structure "actiro" which use four in and out queue because each of the four step has an input and output. and each step become as a function.
+fft8-dynamic: besides the complex class, this imposition uses class "fifo_t" to make a queue (first in, first out), And there is a structure that uses "actiro" which uses four in and out queues. Each of the four steps becomes an input and output and each step becomes a function.
 
-fft8-multithread: it almost like fft8-dynamic but instead of thread it will use four threads. and each function is using one thread and in all of this function we should make sure that there are enough inputs from the output of last function(4 steps). 
-
-
+fft8-multithread: it is almost like fft8-dynamic, but instead of threads it will use four threads. And each function is using one thread and in all of these functions we should make sure that there are enough inputs from the output of the last function(4 steps). 
